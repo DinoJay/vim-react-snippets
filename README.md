@@ -78,7 +78,7 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 | -------: | ------- |
 | `cwm→`   | `componentWillMount() {...}` |
 | `cdm→`   | `componentDidMount() {...}` |
-| `cwrp→`  | `componentWillReceiveProps(nextProps) {...}` |
+| `gdsfp→`  | `getDerivedStateFromProps(nextProps, prevState) {...}` |
 | `scup→`  | `shouldComponentUpdate(nextProps, nextState) {...}` |
 | `cwup→`  | `componentWillUpdate(nextProps, nextState) {...}` |
 | `cdup→`  | `componentDidUpdate(prevProps, prevState) {...}` |
