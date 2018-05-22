@@ -133,14 +133,6 @@ snippet ref "Ref" i
 ref={${1:ref} => { this.${2:name} = $1; }}
 endsnippet
 
-
-# Component Lifecycle
-snippet cwm "Component Will Mount" b
-componentWillMount() {
-	$1
-}
-endsnippet
-
 snippet cdm "Component Did Mount" b
 componentDidMount() {
 	$1
@@ -155,12 +147,6 @@ endsnippet
 
 snippet scup "Should Component Update" b
 shouldComponentUpdate(nextProps, nextState) {
-	$1
-}
-endsnippet
-
-snippet cwup "Component Will Update" b
-componentWillUpdate(nextProps, nextState) {
 	$1
 }
 endsnippet
