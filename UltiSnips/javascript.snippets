@@ -1,35 +1,28 @@
 # React & JSX
-snippet rrcc "React Redux Class Component" b
-import React, { Component} from 'react';
-import PropTypes from 'prop-types';
+snippet rrcc "React Redux Class connector" b
 import { connect } from 'react-redux';
-import styles from './${2:$1}.css';
+import actions from './actions';
 
-class ${1:`!v expand('%:t:r')`} extends Component {
-	static propTypes = {
-		children: PropTypes.node,
-		className: PropTypes.string,
-		dispatch: PropTypes.func.isRequired,
-	};
-
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
-			<div className={styles.base}>
-				$3
-			</div>
-		);
-	}
-}
-
-function mapStateToProps(state) {
+const mapStateToProps = state => {
 	return {};
 }
 
-export default connect(mapStateToProps)($1);
+/* 
+exampleAction: authUser => {
+    dispatch(setAuthUser(authUser));
+  }
+*/
+const mapDispatchToProps = dispatch => 
+	bindActionCreators(
+    {
+     actions
+    },
+    dispatch
+	);
+	
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({});
+ 
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)($1);
 endsnippet
 
 snippet rcc "React Class Component" b
